@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>VCS</title>
+    <link rel="stylesheet" href="css/vcs.css">
+</head>
+
+<body>
+    <h1>Will Canfield -- Version Control System -- May 2019</h1>
+    <h3>Version control systems are a category of software tools that help a software team manage changes to source
+        code over time. Version control software keeps track of every modification to the code in a special kind of
+        database. If a mistake is made, developers can turn back the clock and compare earlier versions of the code to
+        help fix the mistake while minimizing disruption to all team members.</h3>
+    <h3>Here is the link <a href=" https://www.atlassian.com/git/tutorials/what-is-version-control">(click here)</a>
+        <h3>Git is the most commonly used version control system today and is quickly becoming the standard for version
+            control. Git is a distributed version control system, meaning your local copy of code is a complete version
+            control repository. These fully-functional local repositories make it is easy to work offline or remotely.
+            You commit your work locally, and then sync your copy of the repository with the copy on the server. This
+            paradigm differs from centralized version control where clients must synchronize code with a server before
+            creating new versions of code.</h3>
+        <h3>Here is the link <a href="https://docs.microsoft.com/en-us/azure/devops/learn/git/what-is-git">(click here)</a>
+            <h3>1) <pre><font color="#8AE234"><b>compsci@compsci-VBox</b></font>:<font color="#729FCF"><b>~</b></font>$ sudo apt update
+                [sudo] password for compsci:  </pre></h3>
+            <h3> 2) <pre><font color="#8AE234"><b>compsci@compsci-VBox</b></font>:<font color="#729FCF"><b>~</b></font>$ sudo apt install git
+                Reading package lists... Done
+                Building dependency tree       
+                Reading state information... Done
+                git is already the newest version (1:2.17.1-1ubuntu0.4).
+                0 upgraded, 0 newly installed, 0 to remove and 445 not upgraded.
+                </pre></h3>
+            <h3> 3) <pre><font color="#8AE234"><b>compsci@compsci-VBox</b></font>:<font color="#729FCF"><b>~</b></font>$ git --version
+                git version 2.17.1
+                </pre></h3>
+            <h3> 4) <pre><font color="#8AE234"><b>compsci@compsci-VBox</b></font>:<font color="#729FCF"><b>/var/www/html/willc -- May 22 --/projects/vcs</b></font>$ git config --global user.name &quot;WillCanfield&quot;
+            </pre> </h3>
+            <h3> 5) <pre><font color="#8AE234"><b>compsci@compsci-VBox</b></font>:<font color="#729FCF"><b>/var/www/html/willc -- May 22 --/projects/vcs</b></font>$ git config --global user.email &quot;will.canfield14@gmail.com&quot;
+            </pre></h3>
+            <h3> 6)
+                <pre><font color="#8AE234"><b>compsci@compsci-VBox</b></font>:<font color="#729FCF"><b>/var/www/html/willc -- May 22 --/projects/vcs</b></font>$ git config 
+       </pre>
+            </h3>
+            <h3> 7)
+                <pre><font color="#8AE234"><b>compsci@compsci-VBox</b></font>:<font color="#729FCF"><b>/var/www/html/willc -- May 22 --/projects/vcs</b></font>$ git init
+        Initialized empty Git repository in /var/www/html/willc -- May 22 --/projects/vcs/.git/
+        </pre>
+            </h3>
+            <h3>8)
+                <pre><font color="#8AE234"><b>compsci@compsci-VBox</b></font>:<font color="#729FCF"><b>/var/www/html/willc -- May 22 --/projects/vcs/.git</b></font>$ ll
+            total 40
+            drwxr-xr-x 7 compsci compsci 4096 May 22 13:39 <font color="#729FCF"><b>.</b></font>/
+            drwxrwxr-x 6 compsci compsci 4096 May 22 13:39 <font color="#729FCF"><b>..</b></font>/
+            drwxr-xr-x 2 compsci compsci 4096 May 22 13:39 <font color="#729FCF"><b>branches</b></font>/
+            -rw-r--r-- 1 compsci compsci   92 May 22 13:39 config
+            -rw-r--r-- 1 compsci compsci   73 May 22 13:39 description
+            -rw-r--r-- 1 compsci compsci   23 May 22 13:39 HEAD
+            drwxr-xr-x 2 compsci compsci 4096 May 22 13:39 <font color="#729FCF"><b>hooks</b></font>/
+            drwxr-xr-x 2 compsci compsci 4096 May 22 13:39 <font color="#729FCF"><b>info</b></font>/
+            drwxr-xr-x 4 compsci compsci 4096 May 22 13:39 <font color="#729FCF"><b>objects</b></font>/
+            drwxr-xr-x 4 compsci compsci 4096 May 22 13:39 <font color="#729FCF"><b>refs</b></font>/
+            </pre>
+            </h3>
+            <h3>9)
+                <pre><font color="#8AE234"><b>compsci@compsci-VBox</b></font>:<font color="#729FCF"><b>/var/www/html/willc -- May 22 --/projects/vcs/.git</b></font>$ rm -rf .git
+        </pre>
+            </h3>
+            <h3>10)
+                <pre><font color="#8AE234"><b>compsci@compsci-VBox</b></font>:<font color="#729FCF"><b>/var/www/html/willc -- May 22 --/projects/vcs</b></font>$ ll
+            total 24
+            drwxrwxr-x  5 compsci compsci 4096 May 22 13:50 <font color="#729FCF"><b>.</b></font>/
+            drwx------ 32 compsci compsci 4096 May 20 13:14 <font color="#729FCF"><b>..</b></font>/
+            drwxrwxr-x  2 compsci compsci 4096 May 20 13:14 <font color="#729FCF"><b>css</b></font>/
+            drwxrwxr-x  2 compsci compsci 4096 May 20 13:15 <font color="#729FCF"><b>images</b></font>/
+            -rw-rw-r--  1 compsci compsci 4064 May 22 13:48 index.html
+            drwxrwxr-x  2 compsci compsci 4096 May 20 13:15 <font color="#729FCF"><b>js</b></font>/
+            </pre>
+            </h3>
+            <h3>11)
+                <pre><font color="#8AE234"><b>compsci@compsci-VBox</b></font>:<font color="#729FCF"><b>/var/www/html/willc -- May 22 --/projects/vcs</b></font>$ git status
+            fatal: not a git repository (or any of the parent directories): .git
+            </pre>
+            </h3>
+            <h3>12)
+                <pre><font color="#8AE234"><b>compsci@compsci-VBox</b></font>:<font color="#729FCF"><b>/var/www/html/willc -- May 22 --/projects/vcs</b></font>$ touch .gitignore
+            <h3>13) <pre><font color="#8AE234"><b>compsci@compsci-VBox</b></font>:<font color="#729FCF"><b>/var/www/html/willc -- May 22 --/projects/vcs</b></font>$ gedit .gitignore
+            </pre>
+            </h3>
+            </pre>
+        </h3>
+        <h3>14)
+            <pre><font color="#8AE234"><b>compsci@compsci-VBox</b></font>:<font color="#729FCF"><b>/var/www/html/willc -- May 22 --/projects/vcs</b></font>$ git status
+                <font color="#8AE234"><b>compsci@compsci-VBox</b></font>:<font color="#729FCF"><b>/var/www/html/willc -- May 22 --/projects/vcs</b></font>$ git add -A</pre>
+        </h3>
+        <h3>15)
+            <pre><font color="#8AE234"><b>compsci@compsci-VBox</b></font>:<font color="#729FCF"><b>/var/www/html/willc -- May 22 --/projects/vcs</b></font>$ git reset
+                </pre>
+        </h3>
+        <h3>16) <pre><font color="#8AE234"><b>compsci@compsci-VBox</b></font>:<font color="#729FCF"><b>/var/www/html/willc -- May 22 --/projects/vcs</b></font>$ git diff
+            Not a git repository
+            To compare two paths outside a working tree:
+            usage: git diff [--no-index] &lt;path&gt; &lt;path&gt;
+            </pre></h3>
+</body>
+
+</html>
